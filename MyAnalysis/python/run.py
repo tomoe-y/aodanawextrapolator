@@ -38,7 +38,8 @@ if __name__ == "__main__":
     args = SetupArgParser().parse_args()
 
     flags = initConfigFlags()
-    flags.Input.Files = args.inputFile
+    #flags.Input.Files = args.inputFile
+    flags.Input.Files = [iii for ii in [i.split(',') for i in args.inputFile] for iii in ii]
     flags.Exec.MaxEvents = args.maxEvents
     flags.Output.HISTFileName = args.outputFile
     flags.lock()
