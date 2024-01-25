@@ -11,7 +11,7 @@ def SetupArgParser():
     parser.add_argument("--inputFile", "-i", default=["/gpfs/fs8001/youhei/L2MuonSA/dataset_aod_official/valid1.801164.P8B_A14_CTEQ6L1_bb_Jpsi1S_mu6mu4.recon.AOD.e8514_e8528_s4111_s4114_r14781_tid33979104_00/AOD.33979104._000001.pool.root.1"], 
                         help="Input file to run on ", nargs="+")
     parser.add_argument("--maxEvents", default=-1, type=int, help="How many events shall be run maximally")
-    parser.add_argument("--outputFile", default=["MyAnalysis.root"], help="Output file to run on")
+    parser.add_argument("--outputFile", default="MyAnalysis.root", help="Output file to run on")
     return parser
 
 def setupServicesCfg(flags):
